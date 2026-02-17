@@ -1,0 +1,13 @@
+{
+  "name": "lp-template",
+  "version": "1.0.0",
+  "description": "LP Template with SASS",
+  "scripts": {
+    "sass": "sass css/styles.scss css/styles.css",
+    "dev": "sass --watch css/styles.scss css/styles.css",
+    "build": "sass css/styles.scss css/styles.css --style compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}
