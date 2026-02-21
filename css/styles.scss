@@ -1,2 +1,465 @@
 @use 'sass:color';
 @use 'variables' as *;
+
+// ============================================
+// Font Face
+// ============================================
+
+@font-face {
+  font-family: 'GenEi POPle Pw';
+  src: url('../fonts/GenEiPOPlePw-Bk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'hanatotyoutyo';
+  src:
+    url('../fonts/hanatotyoutyo.woff2') format('woff2'),
+    url('../fonts/hanatotyoutyo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// ============================================
+// Base Styles
+// ============================================
+
+body {
+  font-family: $font-main;
+  color: $color-text-black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $color-bg-pink;
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 375px;
+    margin: 0 auto;
+  }
+}
+
+.fv {
+  position: relative;
+  width: 100%;
+  background-image: url('../img/fv/bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  padding-top: 10px;
+
+  &__title {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__btn {
+    display: block;
+    width: 320px;
+    margin: 20px auto 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+.design-wrapper {
+  overflow-x: hidden;
+}
+.design {
+  margin-top: 45px;
+  padding-bottom: 70px;
+  background-image: url('../img/design/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &__title {
+    padding-top: 70px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 0 #141a18;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #141a18;
+    font-family: 'GenEi POPle Pw';
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0.52px;
+
+    span:nth-of-type(1) {
+      font-size: 2.6rem;
+    }
+    span:nth-of-type(2) {
+      font-size: 3.2rem;
+      color: #f45c96;
+      letter-spacing: 1.36px;
+    }
+    span:nth-of-type(3) {
+      font-size: 3.2rem;
+      letter-spacing: 1.36px;
+    }
+  }
+
+  &__left-line {
+    position: absolute;
+    top: -8px;
+    left: -14px;
+    display: block;
+    width: 93px;
+    height: 159px;
+  }
+
+  &__right-line {
+    position: absolute;
+    top: -13px;
+    right: -50px;
+    display: block;
+    width: 111px;
+    height: 93px;
+  }
+
+  &__article--wrap {
+    position: relative;
+  }
+
+  &__white-left {
+    position: absolute;
+    top: -9px;
+    left: 0;
+    display: block;
+    width: 38px;
+    height: 82px;
+  }
+
+  &__green-right {
+    position: absolute;
+    top: -67px;
+    right: 0px;
+    display: block;
+    width: 46px;
+    height: 81px;
+    z-index: 1;
+  }
+  &__article {
+    background-image: url('../img/design/article/bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 315px;
+    height: 350px;
+    margin: 40px auto 0;
+    position: relative;
+
+    &:first-of-type {
+      margin-top: 53px;
+    }
+
+    h3 {
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      border-radius: 50px;
+      border: 1px solid $color-text-black;
+      background: $color-blue;
+      width: 247px;
+      height: 39px;
+      color: $color-text-white;
+      text-align: center;
+      font-family: 'GenEi POPle Pw';
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 35px;
+    }
+
+    &.soccer {
+      h3 {
+        background: $color-blue;
+      }
+    }
+    &.gritter {
+      h3 {
+        background: $color-teal;
+      }
+    }
+    &.original {
+      h3 {
+        background: $color-purple;
+      }
+    }
+
+    &--img--top {
+      position: absolute;
+      top: 37px;
+      left: 30px;
+      display: block;
+      width: 122px;
+      height: 122px;
+    }
+    &--img--bottom {
+      position: absolute;
+      top: 81px;
+      left: 163px;
+      display: block;
+      width: 122px;
+      height: 122px;
+    }
+    &--text--wrap {
+      position: absolute;
+      bottom: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 259px;
+      height: 104px;
+      background-image: url('../img/design/article/1-hukidashi.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0 auto;
+
+      p {
+        text-align: center;
+        font-size: 1.4rem;
+      }
+    }
+
+    &.soccer {
+      .design__article--text--wrap {
+        background-image: url('../img/design/article/1-hukidashi.png');
+
+        p {
+          padding: 32px 16px 12px 12px;
+        }
+      }
+    }
+    &.gritter {
+      .design__article--text--wrap {
+        background-image: url('../img/design/article/2-hukidashi.png');
+
+        p {
+          padding: 32px 16px 12px 12px;
+        }
+      }
+    }
+    &.original {
+      .design__article--text--wrap {
+        background-image: url('../img/design/article/3-hukidashi.png');
+
+        p {
+          padding: 26px 16px 12px 12px;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 256px;
+    margin: 32px auto 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.example {
+  position: relative;
+  padding-bottom: 170px;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/example/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    z-index: -1;
+  }
+
+  &__star-left {
+    position: absolute;
+    top: 79px;
+    left: 14px;
+    width: 66px;
+    height: 61px;
+  }
+
+  &__star-right {
+    position: absolute;
+    top: -25px;
+    right: 25px;
+    width: 43px;
+    height: 44px;
+  }
+
+  &__title {
+    padding-top: 25px;
+    color: #fff;
+    text-align: center;
+    font-family: 'GenEi POPle Pw';
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0.52px;
+    text-shadow: 2px 2px 0 $color-text-black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $color-text-black;
+  }
+
+  &__subtitle {
+    color: $color-text-pink;
+    text-align: center;
+    font-family: 'GenEi POPle Pw';
+    font-size: 1.6rem;
+    margin-top: 13px;
+    font-weight: 900;
+  }
+
+  &__swiper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    // display: flex;
+  }
+
+  &__swiper--item {
+    position: relative;
+
+    &.insta1 {
+      width: 185px;
+      height: 225px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &.insta2 {
+      width: 189px;
+      height: 179px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &.insta3 {
+      width: 185px;
+      height: 175px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &.hukidashi1 {
+      width: 210px;
+      height: 211px;
+      position: relative;
+
+      p {
+        width: 153px;
+        height: 90px;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: center;
+        color: $color-text-black;
+        margin: 0 auto;
+        padding-top: 51px;
+      }
+
+      img {
+        width: 210px;
+        height: 211px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    }
+
+    &.hukidashi2 {
+      width: 210px;
+      height: 90px;
+      position: relative;
+
+      p {
+        width: 153px;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: center;
+        color: $color-text-black;
+        margin: 0 auto;
+        padding-top: 15px;
+      }
+
+      img {
+        width: 210px;
+        height: 90px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    }
+
+    &.hukidashi3 {
+      width: 224px;
+      height: 198px;
+      position: relative;
+
+      p {
+        width: 127px;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: center;
+        color: $color-text-black;
+        margin: 0 auto;
+        padding-top: 61px;
+      }
+
+      img {
+        width: 224px;
+        height: 198px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__line {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 376px;
+    height: 87px;
+  }
+}
