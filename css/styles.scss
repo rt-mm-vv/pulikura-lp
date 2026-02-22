@@ -61,35 +61,47 @@ body {
       width: 67%;
     }
     &--top {
-      color: #fff;
+      color: $color-text-white;
       text-shadow: 6px 6px 0 #f684ab;
       -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: #141a18;
       font-family: 'GenEi POPle Pw';
-      font-size: 60px;
+      font-size: clamp(60px, 16vw, 123px);
       font-style: normal;
       font-weight: 900;
       line-height: normal;
 
+      @media (min-width: $breakpoint-md) {
+        font-size: 60px;
+      }
+
       span {
-        color: #fff;
+        color: $color-text-white;
         font-family: 'GenEi POPle Pw';
-        font-size: 40px;
+        font-size: clamp(40px, 10.67vw, 82px);
         font-style: normal;
         font-weight: 900;
         line-height: normal;
+
+        @media (min-width: $breakpoint-md) {
+          font-size: 40px;
+        }
       }
     }
     &--bottom {
-      color: #f45c96;
+      color: $color-text-pink;
       text-shadow: 6px 6px 0 #f8c7da;
       -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: #fff;
       font-family: 'GenEi POPle Pw';
-      font-size: 72px;
+      font-size: clamp(72px, 19.2vw, 148px);
       font-style: normal;
       font-weight: 900;
       line-height: normal;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 72px;
+      }
     }
     &--bg {
       width: 100%;

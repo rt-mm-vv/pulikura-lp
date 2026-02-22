@@ -48,23 +48,33 @@ body {
   width: 67%;
 }
 .fv__title--top {
-  color: #fff;
+  color: #ffffff;
   text-shadow: 6px 6px 0 #f684ab;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #141a18;
   font-family: "GenEi POPle Pw";
-  font-size: 60px;
+  font-size: clamp(60px, 16vw, 123px);
   font-style: normal;
   font-weight: 900;
   line-height: normal;
 }
+@media (min-width: 768px) {
+  .fv__title--top {
+    font-size: 60px;
+  }
+}
 .fv__title--top span {
-  color: #fff;
+  color: #ffffff;
   font-family: "GenEi POPle Pw";
-  font-size: 40px;
+  font-size: clamp(40px, 10.67vw, 82px);
   font-style: normal;
   font-weight: 900;
   line-height: normal;
+}
+@media (min-width: 768px) {
+  .fv__title--top span {
+    font-size: 40px;
+  }
 }
 .fv__title--bottom {
   color: #f45c96;
@@ -72,10 +82,15 @@ body {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #fff;
   font-family: "GenEi POPle Pw";
-  font-size: 72px;
+  font-size: clamp(72px, 19.2vw, 148px);
   font-style: normal;
   font-weight: 900;
   line-height: normal;
+}
+@media (min-width: 768px) {
+  .fv__title--bottom {
+    font-size: 72px;
+  }
 }
 .fv__title--bg {
   width: 100%;
