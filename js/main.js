@@ -49,3 +49,10 @@ if (figure) {
     figure.scrollLeft += e.deltaY;
   }, { passive: false });
 }
+
+// FAQ accordion
+document.querySelectorAll('.question__article').forEach((article) => {
+  article.addEventListener('click', () => {
+    article.classList.toggle('is-open');
+  });
+});
