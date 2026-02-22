@@ -14,18 +14,24 @@
   <body>
     <section class="fv">
       <h1>
+        <div class="fv__title--wrap">
+          <span class="fv__title--top">クラT<span>なら</span></span
+          ><br />
+          <span class="fv__title--bottom">プリクラ</span>
+        </div>
         <img
-          class="fv__title"
+          class="fv__title--bg"
           src="img/fv/fv.png"
-          alt="クラTならプリクラ。デザイン修正回数無制限"
+          alt="担任の先生より頼れる。進路相談より親身。デザイン修正回数無制限"
         />
       </h1>
+
       <a href="" target="_blank" class="fv__btn"
-        ><img src="./img/green-btn.png" alt="デザイン相談をする"
+        ><img src="./img/green-btn-1.png" alt="デザイン相談をする"
       /></a>
     </section>
     <div class="design-wrapper">
-      <section class="design">
+      <section id="design" class="design">
         <img
           src="./img/design/left-line.png"
           alt=""
@@ -116,12 +122,12 @@
           </article>
         </div>
         <a href="" target="_blank" class="design__btn"
-          ><img src="./img/green-btn.png" alt="デザイン相談をする"
+          ><img src="./img/green-btn-1.png" alt="デザイン相談をする"
         /></a>
       </section>
     </div>
 
-    <section class="example">
+    <section id="example" class="example">
       <img
         src="./img/example/star-left.png"
         alt=""
@@ -172,7 +178,7 @@
       <img src="./img/example/line.png" alt="" class="example__line" />
     </section>
 
-    <section class="difference">
+    <section id="difference" class="difference">
       <h2 class="difference__title">他と何が違うの?</h2>
 
       <div class="difference__figure">
@@ -180,10 +186,10 @@
       </div>
 
       <a href="" target="_blank" class="difference__btn"
-        ><img src="./img/green-btn-soudan.png" alt="相談だけしてみる"
+        ><img src="./img/green-btn-2.png" alt="相談だけしてみる"
       /></a>
     </section>
-    <section class="flow">
+    <section id="flow" class="flow">
       <h2 class="flow__title">
         クラTの作成手順は、<br />ストーリー上げるより<br /><span>簡単</span>
       </h2>
@@ -219,7 +225,7 @@
       </article>
     </section>
 
-    <section class="question">
+    <section id="question" class="question">
       <h2 class="question__title">よくある質問</h2>
 
       <article class="question__article">
@@ -247,7 +253,7 @@
       </article>
 
       <a href="" target="_blank" class="question__btn"
-        ><img src="./img/green-btn-soudan-2.png" alt="相談してみる"
+        ><img src="./img/green-btn-3.png" alt="相談してみる"
       /></a>
     </section>
 
@@ -267,11 +273,13 @@
       </ul>
 
       <ul class="footer__nav">
-        <li class="footer__nav--item"><a href="">デザイン</a></li>
-        <li class="footer__nav--item"><a href="">制作事例</a></li>
-        <li class="footer__nav--item"><a href="">プリクラの強み</a></li>
-        <li class="footer__nav--item"><a href="">お届けまでの流れ</a></li>
-        <li class="footer__nav--item"><a href="">よくある質問</a></li>
+        <li class="footer__nav--item"><a href="#design">デザイン</a></li>
+        <li class="footer__nav--item"><a href="#example">制作事例</a></li>
+        <li class="footer__nav--item">
+          <a href="#difference">プリクラの強み</a>
+        </li>
+        <li class="footer__nav--item"><a href="#flow">お届けまでの流れ</a></li>
+        <li class="footer__nav--item"><a href="#question">よくある質問</a></li>
       </ul>
 
       <div class="footer__btn--wrap">

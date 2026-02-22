@@ -37,8 +37,50 @@ body {
   padding-top: 10px;
 }
 .fv__title {
+  position: relative;
+}
+.fv__title--wrap {
+  position: absolute;
+  z-index: 1;
+  top: 31%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 67%;
+}
+.fv__title--top {
+  color: #fff;
+  text-shadow: 6px 6px 0 #f684ab;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #141a18;
+  font-family: "GenEi POPle Pw";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+.fv__title--top span {
+  color: #fff;
+  font-family: "GenEi POPle Pw";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+.fv__title--bottom {
+  color: #f45c96;
+  text-shadow: 6px 6px 0 #f8c7da;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+  font-family: "GenEi POPle Pw";
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+.fv__title--bg {
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 .fv__btn {
   display: block;
