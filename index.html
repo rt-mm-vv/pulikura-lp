@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -115,45 +119,47 @@
           ><img src="./img/green-btn.png" alt="デザイン相談をする"
         /></a>
       </section>
+    </div>
 
-      <section class="example">
-        <img
-          src="./img/example/star-left.png"
-          alt=""
-          class="example__star-left"
-        />
-        <img
-          src="./img/example/star-right.png"
-          alt=""
-          class="example__star-right"
-        />
-        <h2 class="example__title">みんなの制作事例</h2>
-        <p class="example__subtitle">実際にJKが作ったクラTはこれ</p>
+    <section class="example">
+      <img
+        src="./img/example/star-left.png"
+        alt=""
+        class="example__star-left"
+      />
+      <img
+        src="./img/example/star-right.png"
+        alt=""
+        class="example__star-right"
+      />
+      <h2 class="example__title">みんなの制作事例</h2>
+      <p class="example__subtitle">実際にJKが作ったクラTはこれ</p>
 
-        <div class="example__swiper">
-          <div class="example__swiper--item insta1">
+      <div class="swiper example__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide example__swiper--item insta1">
             <img src="./img/example/swiper/insta1.png" alt="" />
           </div>
-          <div class="example__swiper--item hukidashi1">
+          <div class="swiper-slide example__swiper--item hukidashi1">
             <p>
               夜遅くのLINEでの連絡でも嫌な感じを出さずに迅速に返信してくださり、密なコミュニケーションで良いものを作ってもらうことができました！また細かい修正を的確に意図を汲み取っていただきすごく有り難かったです！！
             </p>
             <img src="./img/example/swiper/hukidashi1.png" alt="" />
           </div>
-          <div class="example__swiper--item insta2">
+          <div class="swiper-slide example__swiper--item insta2">
             <img src="./img/example/swiper/insta2.png" alt="" />
           </div>
-          <div class="example__swiper--item hukidashi2">
+          <div class="swiper-slide example__swiper--item hukidashi2">
             <p>
               とても親切で何回も修正をお願いしたのに優しく対応してくれて
               安心しながら可愛い最後のクラスTシャツを作れて良かったです！
             </p>
             <img src="./img/example/swiper/hukidashi2.png" alt="" />
           </div>
-          <div class="example__swiper--item insta3">
+          <div class="swiper-slide example__swiper--item insta3">
             <img src="./img/example/swiper/insta3.png" alt="" />
           </div>
-          <div class="example__swiper--item hukidashi3">
+          <div class="swiper-slide example__swiper--item hukidashi3">
             <p>
               たくさんの細かい質問にも一つ一つURLや写真を送って説明してくださってとても助かりました！<br />
               人生最後のクラスTシャツ大満足です！！！ホントにありがとうございました！
@@ -161,9 +167,23 @@
             <img src="./img/example/swiper/hukidashi3.png" alt="" />
           </div>
         </div>
+      </div>
 
-        <img src="./img/example/line.png" alt="" class="example__line" />
-      </section>
-    </div>
+      <img src="./img/example/line.png" alt="" class="example__line" />
+    </section>
+
+    <section class="difference">
+      <h2 class="difference__title">他と何が違うの?</h2>
+
+      <div class="difference__figure">
+        <img src="./img/difference/figure.png" alt="" />
+      </div>
+
+      <a href="" target="_blank" class="difference__btn"
+        ><img src="./img/green-btn-soudan.png" alt="相談だけしてみる"
+      /></a>
+    </section>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </html>
