@@ -26,15 +26,117 @@ body {
   }
 }
 
+.pc-bg {
+  display: none;
+}
+@media (min-width: 768px) {
+  .pc-bg {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1440px;
+    height: 100%;
+    background-image: url("../img/pc-bg.png");
+    background-size: 1440px auto;
+    background-position: top center;
+    background-repeat: repeat-y;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+.pc-menu {
+  display: none;
+}
+@media (min-width: 1177px) {
+  .pc-menu {
+    display: block;
+    position: fixed;
+    top: 23%;
+    left: 50%;
+    margin-left: 301px;
+    width: 276px;
+    height: 337px;
+    background-image: url("../img/pc-menu-bg.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
+  .pc-menu__title {
+    color: #ffffff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    font-family: "GenEi POPle Pw";
+    text-align: center;
+    width: 161px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50px;
+    border: 1px solid #141a18;
+    background: #f45c96;
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .pc-menu__list {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 32px;
+    margin-top: 62px;
+  }
+  .pc-menu__item a {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+  }
+  .pc-menu__item a::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: -28px;
+    width: 19px;
+    height: 19px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .pc-menu__item a.menu-design::before {
+    background-image: url("../img/menu-icon-1.png");
+  }
+  .pc-menu__item a.menu-example::before {
+    background-image: url("../img/menu-icon-2.png");
+  }
+  .pc-menu__item a.menu-difference::before {
+    background-image: url("../img/menu-icon-3.png");
+  }
+  .pc-menu__item a.menu-flow::before {
+    background-image: url("../img/menu-icon-4.png");
+  }
+  .pc-menu__item a.menu-question::before {
+    background-image: url("../img/menu-icon-5.png");
+  }
+  .pc-menu__item a:hover {
+    opacity: 0.6;
+  }
+}
+
 .fv {
   position: relative;
   width: 100%;
   background-image: url("../img/fv/bg.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   z-index: 1;
-  padding-top: 10px;
 }
 .fv__title {
   position: relative;
