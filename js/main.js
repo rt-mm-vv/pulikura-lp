@@ -1,14 +1,14 @@
-// new Swiper('.example__swiper', {
-//   loop: true,
-//   freeMode: true,
-//   slidesPerView: 'auto',
-//   spaceBetween: 16,
-//   speed: 8000,
-//   autoplay: {
-//     delay: 0,
-//     disableOnInteraction: false,
-//   },
-// });
+new Swiper('.example__swiper', {
+  loop: true,
+  freeMode: true,
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  speed: 8000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+});
 
 // Drag scroll for .difference__figure
 const figure = document.querySelector('.difference__figure');
@@ -43,11 +43,15 @@ if (figure) {
   });
 
   // Wheel to horizontal scroll
-  figure.addEventListener('wheel', (e) => {
-    if (e.deltaY === 0) return;
-    e.preventDefault();
-    figure.scrollLeft += e.deltaY;
-  }, { passive: false });
+  figure.addEventListener(
+    'wheel',
+    (e) => {
+      if (e.deltaY === 0) return;
+      e.preventDefault();
+      figure.scrollLeft += e.deltaY;
+    },
+    { passive: false },
+  );
 }
 
 // FAQ accordion
