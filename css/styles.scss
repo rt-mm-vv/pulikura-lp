@@ -32,12 +32,17 @@ body {
   color: $color-text-black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: $color-bg-pink;
 
   @media (min-width: $breakpoint-md) {
     max-width: 375px;
     margin: 0 auto;
+    background-color: $color-bg-light-pink;
   }
+}
+
+main {
+  position: relative;
+  background-color: $color-bg-pink;
 }
 
 .pc-bg {
@@ -161,7 +166,7 @@ body {
   position: relative;
   width: 100%;
   background-image: url('../img/fv/bg.png');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   z-index: 1;
@@ -242,11 +247,15 @@ body {
   }
 }
 .design-wrapper {
-  overflow-x: hidden;
+  overflow-x: clip;
+  background-color: $color-bg-pink;
+  position: relative;
+  z-index: 1;
 }
 .design {
   margin-top: 45px;
-  padding-bottom: 70px;
+  padding-bottom: 23px;
+  margin-bottom: 12.8vw;
   background-image: url('../img/design/bg.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -254,6 +263,29 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+
+  @media (min-width: $breakpoint-md) {
+    margin-bottom: 47px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -12.8vw;
+    left: 0;
+    width: 100%;
+    width: 100%;
+    aspect-ratio: 750 / 96;
+    background-image: url('../img/design/bg-bottom.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 1;
+
+    @media (min-width: $breakpoint-md) {
+      bottom: -47px;
+    }
+  }
 
   &__title {
     padding-top: 70px;
@@ -460,7 +492,7 @@ body {
   &::before {
     content: '';
     position: absolute;
-    top: -30px;
+    top: -12.8vw;
     left: 0;
     right: 0;
     bottom: 0;
@@ -468,7 +500,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-    z-index: -1;
+    z-index: 0;
+
+    @media (min-width: $breakpoint-md) {
+      top: -47px;
+    }
   }
 
   &__star-left {
@@ -477,6 +513,7 @@ body {
     left: 14px;
     width: 66px;
     height: 61px;
+    z-index: 2;
   }
 
   &__star-right {
@@ -485,6 +522,7 @@ body {
     right: 25px;
     width: 43px;
     height: 44px;
+    z-index: 2;
   }
 
   &__title {
@@ -499,6 +537,8 @@ body {
     text-shadow: 2px 2px 0 $color-text-black;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $color-text-black;
+    position: relative;
+    z-index: 1;
   }
 
   &__subtitle {
@@ -508,6 +548,8 @@ body {
     font-size: 1.6rem;
     margin-top: 13px;
     font-weight: 900;
+    position: relative;
+    z-index: 1;
   }
 
   &__swiper {
@@ -673,7 +715,20 @@ body {
     background-image: url('../img/difference/bottom-icon.png');
     background-size: contain;
     background-repeat: no-repeat;
+    width: 100%;
     background-position: center;
+
+    @media (min-width: 470px) {
+      left: 50%;
+      width: 100%;
+      background-repeat: repeat-x;
+    }
+
+    @media (min-width: 768px) {
+      left: 53%;
+      width: 353px;
+      background-repeat: no-repeat;
+    }
   }
 
   &__title {
@@ -757,7 +812,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: -1;
+    z-index: 0;
   }
 
   &__title {
@@ -803,6 +858,7 @@ body {
     height: 120px;
     margin: 35px auto 0;
     position: relative;
+    z-index: 1;
 
     &:first-of-type {
       margin-top: 56px;
